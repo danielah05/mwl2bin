@@ -19,6 +19,7 @@ after that, just drag the mwl file onto the python script and a new folder shoul
 just copy the "lvl" folder into the main directoy of the dissasembly and compile the rom.
 ### what is currently not supported?
 1. changing the background tiles
+3. fully functional screen exits
 2. possibly other stuff i do not know about
 
 everything else like swapping gfx, music, palettes etc is supported.
