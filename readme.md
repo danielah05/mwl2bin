@@ -17,6 +17,8 @@ make sure to name the file the same as the bin file you are going to replace in 
 after that, just drag the mwl file onto the python script and a new folder should appear called "lvl", this folder should have the two bin files.
 
 just copy the "lvl" folder into the main directoy of the dissasembly and compile the rom.
+### what is currently not supported?
+from what i can currently tell, changing the background tiles, everything else like swapping gfx, music, palettes etc is supported.
 ### my game is crashing after importing the level, what does that mean?
 here are a few things to check for:
 
