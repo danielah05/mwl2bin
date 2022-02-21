@@ -18,6 +18,11 @@ after that, just drag the mwl file onto the python script and a new folder shoul
 
 just copy the "lvl" folder into the main directoy of the dissasembly and compile the rom.
 ### my game is crashing after importing the level, what does that mean?
-this most likely means you have placed down a "direct map16 access" tile, make sure to get rid of that.
+here are a few things to check for:
 
-these tiles are not in the vanilla game, lunar magic automatically patches your rom with special code when saving for the first time to make those tiles work and because of that, they will not work inside the disassembly.
+1. make sure the level is not using any "direct access map16" tiles.
+2. make sure the level is not using any sprites that are not using the right GFX files.
+
+none of the things listed above actually work in smw and get automatically patched into the game by lunar magic.
+
+because of that, the game will either crash or not compile at all, please fix those problems and try again!
