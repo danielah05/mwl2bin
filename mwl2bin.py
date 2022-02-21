@@ -22,7 +22,7 @@ filename = os.path.splitext(removepath)[0]
 # ----------------
 
 data_headerless = data[200:]
-obj_datasplit = data_headerless.split(b"\xff", 1)
+obj_datasplit = data_headerless.split(b"\xff\x04", 1)
 obj_data = obj_datasplit[0]
 
 print("converted obj: "+filename)
@@ -36,10 +36,10 @@ with open("lvl/obj/"+filename+".bin", "wb") as binobj:
 # level data - spr
 # ----------------
 
-data_objremove = data.split(b"\xff", 1)
+data_objremove = data.split(b"\xff\x04", 1)
 data_objless = data_objremove[1]
 
-data_sprstart = data_objless[2064:]
+data_sprstart = data_objless[2063:]
 
 spr_datasplit = data_sprstart.split(b"\xff", 1)
 spr_data = spr_datasplit[0]
