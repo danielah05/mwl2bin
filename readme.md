@@ -18,7 +18,10 @@ after that, just drag the mwl file onto the python script and a new folder shoul
 
 just copy the "lvl" folder into the main directoy of the dissasembly and compile the rom.
 ### what is currently not supported?
-from what i can currently tell, changing the background tiles, everything else like swapping gfx, music, palettes etc is supported.
+1. changing the background tiles
+2. possibly other stuff i do not know about
+
+everything else like swapping gfx, music, palettes etc is supported.
 ### my game is crashing after importing the level, what does that mean?
 here are a few things to check for:
 
