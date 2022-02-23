@@ -43,7 +43,7 @@ print("fixing "+warpamount+" warp(s)...")
 warpdata = obj_data[-4*int(warpamount):]
 nowarpdata = obj_data[:-4*int(warpamount)]
 
-warpdatapossiblefix = warpdata.replace(b"\x05", b"\x00") # replace 05 -> 00 to fix warp???
+warpdatapossiblefix = warpdata.replace(b"\x05\x00", b"\x00\x00") # replace 05 00 -> 00 00 to fix warp???
 
 reconstructedwarps = nowarpdata+warpdatapossiblefix
 
