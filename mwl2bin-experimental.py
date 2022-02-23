@@ -1,9 +1,15 @@
 # SCREEN EXITS:
 # 07 00 00 CB
 # 07 = screen number
-# 00 = would be set to 02 when its an secondary exit (?)
-# 00 = empty (?)
+# 00 = pipe flag (if its a sub or not etc)
+# 00 = empty
 # CB = level destination
+
+# every screen exit flag and what it needs to be converted to (from mwl to bin)
+# 05 -> 00 - default pipe, no sub exit (needs to be converted)
+# 07 -> 02 - default pipe, sub exit (not converting this seems to be fine, should probably do anyways)
+# 0f -> 02 - default pipe, sub exit water flag (custom lunar magic value, so it gets converted to 02)
+#
 
 import os, sys
 
@@ -43,11 +49,13 @@ print("fixing "+warpamount+" warp(s)...")
 warpdata = obj_data[-4*int(warpamount):]
 nowarpdata = obj_data[:-4*int(warpamount)]
 
-warpdatapossiblefix = warpdata.replace(b"\x05\x00", b"\x00\x00") # replace 05 00 -> 00 00 to fix warp???
+warpdatacheck1 = warpdata.replace(b"\x05\x00", b"\x00\x00") # default pipe, no sub exit
+warpdatacheck2 = warpdatacheck1.replace(b"\x07\x00", b"\x02\x00") # default pipe, sub exit
+warpdatacheck3 = warpdatacheck2.replace(b"\x0f\x00", b"\x02\x00") # default pipe, sub exit water flag (custom lunar magic value, so it gets converted to 02)
 
-reconstructedwarps = nowarpdata+warpdatapossiblefix
+reconstructedwarps = nowarpdata+warpdatacheck3
 
-print(str(warpdata)+" -> "+str(warpdatapossiblefix))
+print(str(warpdata)+" -> "+str(warpdatacheck3))
 
 print("(hopefully) fixed screen exits: "+filename)
 
