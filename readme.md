@@ -13,9 +13,8 @@ with this, you can make any level you want and convert it to be used with SMWDis
 4. just copy the "lvl" folder into the main directoy of the dissasembly and compile the rom.
 ### what is currently not supported?
 1. changing the background tiles
-2. fully functional screen exits (currently being worked on, check out mwl2bin-experimental.py)
-3. main/midway/secondary entrances
-4. possibly other stuff i do not know about
+2. main/midway/secondary entrances
+3. possibly other stuff i do not know about
 
 everything else like swapping gfx, music, palettes etc is supported.
 ### my game is crashing after importing the level, what does that mean?
