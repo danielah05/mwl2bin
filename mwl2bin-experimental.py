@@ -9,7 +9,7 @@
 # 05 -> 00 - default pipe, no sub exit (needs to be converted)
 # 07 -> 02 - default pipe, sub exit (not converting this seems to be fine, should probably do anyways)
 # 0f -> 02 - default pipe, sub exit water flag (custom lunar magic value, so it gets converted to 02)
-#
+# 0d -> 00 - default pipe, midway exit (custom lunar magic value, so it gets converted to 00)
 
 import os, sys
 
@@ -40,22 +40,30 @@ obj_data = obj_datasplit[0]
 
 print("converted obj: "+filename)
 
+# -------------------------------
+# level data - obj (screen exits)
+# -------------------------------
+
 print("doing experimental stuff now... things might go wrong!")
 
-warpamount = input("enter the amount of warps in the level: ")
+warpamount = input("enter the amount of screen exits in the level: ")
 
-print("fixing "+warpamount+" warp(s)...")
+print("fixing "+warpamount+" screen exit(s)...")
 
 warpdata = obj_data[-4*int(warpamount):]
 nowarpdata = obj_data[:-4*int(warpamount)]
 
+# do multiple replace checks to make sure warps are correct
 warpdatacheck1 = warpdata.replace(b"\x05\x00", b"\x00\x00") # default pipe, no sub exit
 warpdatacheck2 = warpdatacheck1.replace(b"\x07\x00", b"\x02\x00") # default pipe, sub exit
 warpdatacheck3 = warpdatacheck2.replace(b"\x0f\x00", b"\x02\x00") # default pipe, sub exit water flag (custom lunar magic value, so it gets converted to 02)
+warpdatacheck4 = warpdatacheck3.replace(b"\x0d\x00", b"\x00\x00") # default pipe, midway exit (custom lunar magic value, so it gets converted to 00)
 
-reconstructedwarps = nowarpdata+warpdatacheck3
+warpdatafinal = warpdatacheck4
 
-print(str(warpdata)+" -> "+str(warpdatacheck3))
+reconstructedwarps = nowarpdata+warpdatafinal
+
+print(str(warpdata)+" -> "+str(warpdatafinal))
 
 print("(hopefully) fixed screen exits: "+filename)
 
