@@ -1,6 +1,5 @@
 # mwl2bin
 ## a converter for turning lunar magic mwl files into bin files
-**warning: this may or may not work on linux, i have not tried yet.**
 ### what is the point of this?
 while lunar magic is good for level editing, the tool comes with some flaws.  
 lunar magic cannot edit every level in the game (examples: all of the sub sections in chocolate island 2).  
