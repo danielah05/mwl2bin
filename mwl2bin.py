@@ -1,7 +1,5 @@
 import os, sys
 
-import os, sys
-
 # create directories and stuff
 if not os.path.isdir("lvl"):
     os.mkdir("lvl")
