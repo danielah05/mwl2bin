@@ -14,7 +14,8 @@ with this, you can make any level you want and convert it to be used with SMWDis
 ### what is currently not supported?
 1. changing the background tiles
 2. main/midway/secondary entrances
-3. possibly other stuff i do not know about
+3. vertical levels
+4. possibly other stuff i do not know about
 
 everything else like swapping gfx, music, palettes etc is supported.
 ### what game versions are supported?
