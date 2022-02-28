@@ -33,3 +33,6 @@ here are a few things to check for:
 
 none of the things listed above actually work in smw and get automatically patched into the game by lunar magic.  
 because of that, the game will either crash or not compile at all, please fix those problems and try again!
+### example footages of the python script in action
+https://www.youtube.com/watch?v=qbKnbBTWI5U - converting lunar magic mwl to smw level bin example (feb 21, 2022)  
+https://www.youtube.com/watch?v=M_rCSGLC-m4 - mwl2bin successfully importing custom level into smw pal 1.1 rom (feb 28, 2022)
