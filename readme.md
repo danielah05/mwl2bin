@@ -17,6 +17,15 @@ with this, you can make any level you want and convert it to be used with SMWDis
 3. possibly other stuff i do not know about
 
 everything else like swapping gfx, music, palettes etc is supported.
+### what game versions are supported?
+1. Japanese
+2. North American
+3. Super System
+4. PAL 1.0
+5. PAL 1.1
+
+note for super system, pal 1.0/1.1:  
+lunar magic is unable to open the roms for any of these version, you will have to make the levels either inside the north american version or the japanese version and then import them into the game instead.
 ### my game is crashing after importing the level, what does that mean?
 here are a few things to check for:  
 1. make sure the level is not using any "direct access map16" tiles.
