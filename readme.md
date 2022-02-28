@@ -1,4 +1,5 @@
-# mwl2bin
+<img src="mwl2bin-logo.png" alt="mwl2bin" width="500"/>
+
 ## a converter for turning lunar magic mwl files into bin files
 ### what is the point of this?
 while lunar magic is good for level editing, the tool comes with some flaws.  
